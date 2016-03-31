@@ -1,3 +1,5 @@
+http://www.christopherbloom.com/2015/04/26/setting-up-a-rails-5-app-from-edge/
+
 # dev test
 
 Prepare a rails 4.2 application using Ruby 2.1 , which would have 2 isolated APIs, public and private.
