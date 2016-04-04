@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  post 'pricing/evaluate_target'
+
   resources :target_groups do
   	collection do
   		get ':country_code', action: :index_by_country_code
@@ -10,6 +12,7 @@ Rails.application.routes.draw do
   		get ':country_code', action: :index_by_country_code
   	end
   end
+
   # resources :countries
   # resources :panel_providers
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
