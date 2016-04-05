@@ -1,11 +1,12 @@
 class PricingController < ApplicationController
+
   def evaluate_target
-  	@calculator = Pricing::Calculator.new(params).valid?
+  	@calculator = Pricing::Calculator.new(params)
 
   	if @calculator.valid?
-  		render json: [1,2,3]
+  		render json: Pricing::Serializer.new.to_json
   	else
-  		render json: @panel_provider.errors, status: :unprocessable_entity
+  		render json: @calculator.errors, status: :unprocessable_entity
   	end
   end
 end
