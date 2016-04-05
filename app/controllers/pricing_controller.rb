@@ -4,7 +4,7 @@ class PricingController < ApplicationController
   	@calculator = Pricing::Calculator.new(params)
 
   	if @calculator.valid?
-  		render json: Pricing::Serializer.new.to_json
+  		render json: @calculator.to_json
   	else
   		render json: @calculator.errors, status: :unprocessable_entity
   	end
