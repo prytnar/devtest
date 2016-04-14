@@ -1,0 +1,14 @@
+Beben losujacy:
+- losowania roznego typu 
+- rozniace sie iloscia losowanych kul
+- kiedy sie odbylo losowanie
+- wyniki losowania zapisane trwale
+
+- kazdy typ losowania wyklada inaczej
+- przyklad 1 (duzy lotek 6 z 49)
+- przykald 2 (maly lotek 10 z 40)
+- rails
+- 1 Service Object - CreateDraw (#call)
+
+
+

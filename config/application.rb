@@ -30,3 +30,6 @@ module Devtest
     config.autoload_paths << Rails.root.join('lib')
   end
 end
+
+require Rails.root.to_s + '/lib/draw_service/draw.rb'
+require Rails.root.to_s + '/lib/draw_service/lotek.rb'

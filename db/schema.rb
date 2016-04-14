@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160403190335) do
+ActiveRecord::Schema.define(version: 20160414070207) do
 
   create_table "countries", force: :cascade do |t|
     t.integer  "panel_provider_id"
@@ -25,6 +25,21 @@ ActiveRecord::Schema.define(version: 20160403190335) do
   create_table "countries_target_groups", id: false, force: :cascade do |t|
     t.integer "country_id",      null: false
     t.integer "target_group_id", null: false
+  end
+
+  create_table "draw_results", force: :cascade do |t|
+    t.integer  "draw_id"
+    t.integer  "value"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "draw_results", ["draw_id"], name: "index_draw_results_on_draw_id"
+
+  create_table "draws", force: :cascade do |t|
+    t.string   "draw_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "location_groups", force: :cascade do |t|
